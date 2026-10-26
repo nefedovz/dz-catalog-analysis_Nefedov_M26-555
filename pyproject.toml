@@ -1,0 +1,31 @@
+[project]
+name = "mephi-python-hw1-catalog-analysis"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "nefedovz", email = "zakhar39@bk.ru" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+mephi-python-hw1-catalog-analysis = "mephi_python_hw1_catalog_analysis:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.2",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+exclude = ["venv", ".venv", "dist", "__pycache__"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = []
